@@ -1,0 +1,165 @@
+Agent: Airline 360 Assistant.Baggage_Handling.Bag_Issues
+
+[SYSTEM]:
+
+
+            You are in charge of a portion of the help desk of an airline company.
+            Only answer inquiries that are directly within your area of expertise, 
+            from the company's perspective.
+            Do not try to help for personal matters.
+            Do not mention what you can NOT do. Only mention what you can do.
+            
+The name of this app is `Bag Issues`.
+You will help passengers with delayed, damaged, lost or missing baggage issues.
+You will manage damaged baggage claims by documenting the damage with photos, verifying eligibility 
+for compensation or repair, and guiding passengers on the next steps. Ensure clear communication of 
+policy limits and escalate complex cases to supervisors using documented proof for resolution.
+Read the necessary files from the app's directory to answer the user query.
+Provide the user with a url to this app page Bag Issues.
+If required, provide the user with URLs such as Baggage Tracking, Damaged Bags Claim, Missing Items, Claims Status.
+            
+
+[HUMAN]:
+The inquiry is 'Hello! I lost my suit in a flight, what is the company policy about this situation?'.
+The mode is 'detect'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `ExtractDocs` with `{'app_name': 'Bag Issues'}`
+
+[AGENT]:
+Invoking: `URLProvider` with `{'app_name': 'Bag Issues'}`
+
+[AGENT]:
+Invoking: `URLProvider` with `{'app_name': 'Missing Items'}`
+
+[AI]:
+https://www.united.com/en/us/baggage/bag-help
+
+[AI]:
+https://www.united.com/en/US/fly/help/lost-and-found.html
+
+[AI]:
+{'files': {'damaged bag issues with checked bags.txt': 'Bag help\\nIf your checked bags are delayed, lost, damaged or missing items, we want to make things right. Learn how to\\nreport bag issues and request reimbursement. You can also track your bags in real time with our bag tracker tool\\nor in the Airline app.\\nTypes of bag issues Bag tracker\\nTypes of bag issues\\nDelayed bags\\nLost bags\\nDamaged bags\\nMissing items\\nClaim status\\nDamaged bags\\nIf you think your bag was damaged during your trip with Airline, you can\\nreport it as damaged.\\n1 Report issue\\nYou can report a damaged bag by doing one of the following:\\nReport it at the airport with the Baggage Service Office\\nReport it via chat or text \"BAGS\u201d to 32050\\nReport it by calling the Baggage Recovery Center at 1-800-335-2247\\n(International 1-281-821-3526)\\nAfter you report the issue, you\u2019ll receive a file reference number that ends in\\nD (for example: ORD12345D).\\nIf your items were damaged during a security screening, you should\\nfile a written claim with the Transportation Security Administration\\n(TSA). You can also call the TSA Contact Center at 1-866-289-9673.\\nTraveler pro tip:\\nIf your bag gets damaged, you may be able to get a\\nreplacement from the Baggage Service Office.\\nEnglish - US $\\nSite Feedback\\n2 Request reimbursement\\nStandard checked bags\\nYou can submit a reimbursement claim at rynnsluggage.com if you:\\n1. Reported your damaged bag\\n2. Didn\u2019t receive a replacement bag\\n3. Still need a repair, replacement or reimbursement for damage\\nYou\u2019ll need the file reference number you got when you reported your\\ndamaged bag (for example: ORD12345D).\\nSpecialty items\\nIf you reported damage to a specialty item, like sporting equipment, use the\\ndamaged bag claim to request reimbursement.\\nDamaged bag claim\\nBag tracker\\nEnter your confirmation number and last name to track your bags.\\nReporting timeline\\nReport damaged bags within 24 hours of arrival if you traveled in\\nthe U.S., Guam, Puerto Rico, or the U.S. Virgin Islands.\\nReport damaged bags within 7 days of arrival if you traveled\\ninternationally or returned to the U.S. from abroad.\\nReimbursement claim timeline\\nSubmit your claim within 45 days of arrival if you traveled in the\\nU.S., Guam, Puerto Rico, or the U.S. Virgin Islands.\\nSubmit your claim within 21 days of arrival if you traveled\\ninternationally or returned to the U.S. from abroad.\\nConfirmation number (required) Last name (required)\\nSite Feedback\\nTrack my bags\\nBag help FAQ\\nWhat currency will I be reimbursed in?\\nWhen will my delayed bag be delivered?\\nHow long will you search for my missing checked bag or lost items?\\nI booked my trip with Airline, but the last leg of my trip was with a different airline. Who should I contact\\nabout my delayed or lost bag?\\nI arrived in my connecting city, but my bag didn\u2019t arrive with me. Should I file a delayed bag report?\\nCan I file an interim expense reimbursement claim if I made purchases to cover essential items?\\nBag liability limits\\nAbout Airline\\nProducts and services\\nPopular destinations\\nCareers Important notices\\nSearch\\nSite Feedback\\nEnglish - Airline States $ | Espa\u00f1ol\\nContract of carriage Lengthy tarmac delay plan Legal information Our Airline Customer Commitment Help Center\\nAccessible travel Privacy Policy Do Not Sell or Share My Personal Information Interest Based Ads Airline Jetstream\\nCargo\\nIndicates an external site that may or may not meet accessibility guidelines. Copyright \u00a9 2025 Airline Airlines, Inc. All rights reserved.\\nCoBrowse\\nSite Feedback', 'delayed_Issues with your checked bags.txt': 'Bag help\\nIf your checked bags are delayed, lost, damaged or missing items, we want to make things right. Learn how to\\nreport bag issues and request reimbursement. You can also track your bags in real time with our bag tracker tool\\nor in the Airline app.\\nTypes of bag issues Bag tracker\\nTypes of bag issues\\nDelayed bags\\nLost bags\\nDamaged bags\\nMissing items\\nClaim status\\nDelayed bags\\nChecked bags are considered delayed if they don\u2019t arrive by the time you\\nreach your final destination.\\n1 Report issue\\nYou can report a delayed bag by doing one of the following:\\nReport it online or in the Airline app\\nReport it via chat or text \"BAGS\u201d to 32050\\nReport it by calling the Baggage Recovery Center at 1-800-000-0000\\n(International 1-281-000-0000)\\nReport delayed bags\\nAfter you report the issue, you\\'ll receive a file reference number that ends in\\nM (for example: ORD12345M). You can schedule a pickup or set up free bag\\ndelivery.\\nIn some cases where a bag is delayed over 12 hours, we give an automatic\\nbag fee refund. We\u2019ll automatically refund bag fees if:\\nA bag is delayed over 12 hours on a domestic flight\\nA bag is delayed over 15 hours on an international flight less than 12 hours\\nA bag is delayed over 30 hours on an international flight longer than 12\\nhours\\nEnglish - US $\\nSite Feedback\\nTo learn more about automatic refunds view our policy.\\n2 Request reimbursement\\nAfter you report your delayed bag and get a file reference number, you can\\nrequest reimbursement for the cost of clothes and toiletries while your bag\\nwas delayed.\\nInterim expenses claim\\nBag tracker\\nEnter your confirmation number and last name to track your bags.\\nTrack my bags\\nBag help FAQ\\nReporting timeline\\nReport delayed bags within 24 hours of arrival if you traveled in\\nthe U.S., Guam, Puerto Rico, or the U.S. Virgin Islands.\\nReport delayed bags within 21 days of arrival if you traveled\\ninternationally or returned to the U.S. from abroad.\\nReimbursement claim timeline\\nSubmit your claim within 45 days of arrival if you traveled in the\\nU.S., Guam, Puerto Rico, or the U.S. Virgin Islands.\\nSubmit your claim within 21 days of arrival if you traveled\\ninternationally or returned to the U.S. from abroad.\\nConfirmation number (required) Last name (required)\\nSite Feedback\\nWhat currency will I be reimbursed in?\\nWhen will my delayed bag be delivered?\\nHow long will you search for my missing checked bag or lost items?\\nI booked my trip with Airline, but the last leg of my trip was with a different airline. Who should I contact\\nabout my delayed or lost bag?\\nI arrived in my connecting city, but my bag didn\u2019t arrive with me. Should I file a delayed bag report?\\nCan I file an interim expense reimbursement claim if I made purchases to cover essential items?\\nBag liability limits\\nAbout Airline\\nProducts and services\\nPopular destinations\\nCareers Important notices\\nSite Feedback\\nSearch\\nEnglish - Airline States $ | Espa\u00f1ol\\nContract of carriage Lengthy tarmac delay plan Legal information Our Airline Customer Commitment Help Center\\nAccessible travel Privacy Policy Do Not Sell or Share My Personal Information Interest Based Ads Airline Jetstream\\nCargo\\nIndicates an external site that may or may not meet accessibility guidelines. Copyright \u00a9 2025 Airline Airlines, Inc. All rights reserved.\\nCoBrowse\\nSite Feedback', 'lost_Issues with your checked bags.txt': 'Bag help\\nIf your checked bags are delayed, lost, damaged or missing items, we want to make things right. Learn how to\\nreport bag issues and request reimbursement. You can also track your bags in real time with our bag tracker tool\\nor in the Airline app.\\nTypes of bag issues Bag tracker\\nTypes of bag issues\\nDelayed bags\\nLost bags\\nDamaged bags\\nMissing items\\nClaim status\\nLost bags\\nIf you haven\u2019t received your bag more than 5 days after your arrival, it may\\nbe lost.\\n1 Report issue\\nBefore you can file a lost bag claim, you need to report your bag as delayed\\nby doing one of the following:\\nReport it online or in the Airline app\\nReport it via chat or text \"BAGS\u201d to 32050\\nReport it by calling the Baggage Recovery Center at 1-800-000-0000\\n(International 1-281-000-0000)\\nReport delayed bags\\nAfter you report the issue, you\\'ll receive a file reference number that ends in\\nM (for example: ORD12345M).\\n2 Request reimbursement\\nIf you don\u2019t have your bag 5 days after your arrival and reported your bag as\\ndelayed, we suggest filing a lost bag claim. In your claim, include detailed\\ninformation about the items in your luggage, receipts and a photo ID. We\u2019ll\\nuse this information to complete a thorough search for your bag or quickly\\napprove your reimbursement if we\u2019re unable to find it.\\nEnglish - US $\\nSite Feedback\\nThe maximum reimbursement amount is $3,800 for flights in the U.S. and\\n$1,900 for international flights. Interim expenses that were already\\nreimbursed will be deducted from the total amount.\\nLost bag claim\\nBag tracker\\nEnter your confirmation number and last name to track your bags.\\nTrack my bags\\nBag help FAQ\\nWhat currency will I be reimbursed in?\\nWhen will my delayed bag be delivered?\\nHow long will you search for my missing checked bag or lost items?\\nI booked my trip with Airline, but the last leg of my trip was with a different airline. Who should I contact\\nabout my delayed or lost bag?\\nReimbursement claim timeline\\nSubmit your claim within 45 days of arrival if you traveled in the\\nU.S., Guam, Puerto Rico, or the U.S. Virgin Islands.\\nSubmit your claim within 21 days of arrival if you traveled\\ninternationally or returned to the U.S. from abroad.\\nConfirmation number (required) Last name (required)\\nSite Feedback\\nI arrived in my connecting city, but my bag didn\u2019t arrive with me. Should I file a delayed bag report?\\nCan I file an interim expense reimbursement claim if I made purchases to cover essential items?\\nBag liability limits\\nAbout Airline\\nProducts and services\\nPopular destinations\\nCareers Important notices\\nSearch\\nEnglish - Airline States $ | Espa\u00f1ol\\nContract of carriage Lengthy tarmac delay plan Legal information Our Airline Customer Commitment Help Center\\nAccessible travel Privacy Policy Do Not Sell or Share My Personal Information Interest Based Ads Airline Jetstream\\nCargo\\nIndicates an external site that may or may not meet accessibility guidelines. Copyright \u00a9 2025 Airline Airlines, Inc. All rights reserved.\\nCoBrowse\\nSite Feedback', 'missing_item_Issues with your checked bags.txt': 'Bag help\\nIf your checked bags are delayed, lost, damaged or missing items, we want to make things right. Learn how to\\nreport bag issues and request reimbursement. You can also track your bags in real time with our bag tracker tool\\nor in the Airline app.\\nTypes of bag issues Bag tracker\\nTypes of bag issues\\nDelayed bags\\nLost bags\\nDamaged bags\\nMissing items\\nClaim status\\nMissing items\\nIf items are missing from your checked bags, you can report the issue. For\\nitems lost during travel, file a lost item form.\\n1 Report issue\\nYou can report missing items by doing one of the following:\\nReport it at the airport with the Baggage Service Office\\nReport it via chat or text \"BAGS\u201d to 32050\\nReport it by calling the Baggage Recovery Center at 1-800-000-0000\\n(International 1-281-000-0000)\\nAfter you report the issue, you\\'ll receive a file reference number that ends in\\nP (for example: ORD12345P).\\nIf your items went missing during a security screening, you should\\nfile a written claim with the Transportation Security Administration\\n(TSA). You can also call the TSA Contact Center at 1-866-289-9673.\\nEnglish - US $\\nSite Feedback\\n2 Request reimbursement\\nAfter you report your issue, you can submit a missing items claim for\\nreimbursement.\\nMissing items claim\\nBag tracker\\nEnter your confirmation number and last name to track your bags.\\nTrack my bags\\nBag help FAQ\\nReporting timeline\\nReport missing items within 24 hours of arrival if you traveled in\\nthe U.S., Guam, Puerto Rico, or the U.S. Virgin Islands.\\nReport missing items within 7 days of arrival if you traveled\\ninternationally or returned to the U.S. from abroad.\\nReimbursement claim timeline\\nSubmit your claim within 45 days of arrival if you traveled in the\\nU.S., Guam, Puerto Rico, or the U.S. Virgin Islands.\\nSubmit your claim within 21 days of arrival if you traveled\\ninternationally or returned to the U.S. from abroad.\\nConfirmation number (required) Last name (required)\\nSite Feedback\\nWhat currency will I be reimbursed in?\\nWhen will my delayed bag be delivered?\\nHow long will you search for my missing checked bag or lost items?\\nI booked my trip with Airline, but the last leg of my trip was with a different airline. Who should I contact\\nabout my delayed or lost bag?\\nI arrived in my connecting city, but my bag didn\u2019t arrive with me. Should I file a delayed bag report?\\nCan I file an interim expense reimbursement claim if I made purchases to cover essential items?\\nBag liability limits\\nAbout Airline\\nProducts and services\\nPopular destinations\\nCareers Important notices\\nSite Feedback\\nSearch\\nEnglish - Airline States $ | Espa\u00f1ol\\nContract of carriage Lengthy tarmac delay plan Legal information Our Airline Customer Commitment Help Center\\nAccessible travel Privacy Policy Do Not Sell or Share My Personal Information Interest Based Ads Airline Jetstream\\nCargo\\nIndicates an external site that may or may not meet accessibility guidelines. Copyright \u00a9 2025 Airline Airlines, Inc. All rights reserved.\\nCoBrowse\\nSite Feedback'}}
+
+[AI]:
+I can help you with inquiries about lost items and baggage. To provide you with the most accurate information regarding your lost suit, please clarify how it was lost:
+
+*   Was your suit in a checked bag that is now lost?
+*   Or was the suit itself lost during your travel (e.g., left on the plane, or went missing from your carry-on)?
+
+In the meantime, you can find more information about lost bags and missing items on our website:
+
+*   For general bag issues: https://www.united.com/en/us/baggage/bag-help
+*   For missing items: https://www.united.com/en/US/fly/help/lost-and-found.html
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 6.72786545753479,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+
+            You are in charge of a portion of the help desk of an airline company.
+            Only answer inquiries that are directly within your area of expertise, 
+            from the company's perspective.
+            Do not try to help for personal matters.
+            Do not mention what you can NOT do. Only mention what you can do.
+            
+The name of this app is `Bag Issues`.
+You will help passengers with delayed, damaged, lost or missing baggage issues.
+You will manage damaged baggage claims by documenting the damage with photos, verifying eligibility 
+for compensation or repair, and guiding passengers on the next steps. Ensure clear communication of 
+policy limits and escalate complex cases to supervisors using documented proof for resolution.
+Read the necessary files from the app's directory to answer the user query.
+Provide the user with a url to this app page Bag Issues.
+If required, provide the user with URLs such as Baggage Tracking, Damaged Bags Claim, Missing Items, Claims Status.
+            
+
+[HUMAN]:
+The inquiry is 'I lost my baggages in the last flight I took with your company, what ca I do?'.
+The mode is 'is_responsible'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+I can help you with your lost baggage inquiry.
+
+You can visit our `Bag Issues` app page for more information and to start a claim.
+You can also track your baggage using our `Baggage Tracking` tool or check the status of an existing claim via `Claims Status`. If you need to report missing items, please use the `Missing Items` page.
+
+[AGENT]:
+Invoking: `URLProvider` with `{'app_name': 'Bag Issues'}`
+responded: I can help you with your lost baggage inquiry.
+
+You can visit our `Bag Issues` app page for more information and to start a claim.
+You can also track your baggage using our `Baggage Tracking` tool or check the status of an existing claim via `Claims Status`. If you need to report missing items, please use the `Missing Items` page.
+
+[AGENT]:
+Invoking: `URLProvider` with `{'app_name': 'Baggage Tracking'}`
+responded: I can help you with your lost baggage inquiry.
+
+You can visit our `Bag Issues` app page for more information and to start a claim.
+You can also track your baggage using our `Baggage Tracking` tool or check the status of an existing claim via `Claims Status`. If you need to report missing items, please use the `Missing Items` page.
+
+[AGENT]:
+Invoking: `URLProvider` with `{'app_name': 'Missing Items'}`
+responded: I can help you with your lost baggage inquiry.
+
+You can visit our `Bag Issues` app page for more information and to start a claim.
+You can also track your baggage using our `Baggage Tracking` tool or check the status of an existing claim via `Claims Status`. If you need to report missing items, please use the `Missing Items` page.
+
+[AGENT]:
+Invoking: `URLProvider` with `{'app_name': 'Claims Status'}`
+responded: I can help you with your lost baggage inquiry.
+
+You can visit our `Bag Issues` app page for more information and to start a claim.
+You can also track your baggage using our `Baggage Tracking` tool or check the status of an existing claim via `Claims Status`. If you need to report missing items, please use the `Missing Items` page.
+
+[AI]:
+https://www.united.com/en/us/baggage/bag-help
+
+[AI]:
+https://www.united.com/en/us/bagdelivery/start
+
+[AI]:
+https://www.united.com/en/US/fly/help/lost-and-found.html
+
+[AI]:
+https://www.united.com/en/us/claimform/checkstatus
+
+[AI]:
+I can certainly help you with your lost baggage inquiry. Please visit the `Bag Issues` page at https://www.united.com/en/us/baggage/bag-help for comprehensive assistance.
+
+To track your baggage, you can use the `Baggage Tracking` tool at https://www.united.com/en/us/bagdelivery/start.
+
+If you need to report missing items, please go to https://www.united.com/en/US/fly/help/lost-and-found.html.
+
+You can also check the status of an existing claim at https://www.united.com/en/us/claimform/checkstatus.
+
+To assist you further, please provide me with details about your flight and the lost baggage.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 3.912470817565918,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```

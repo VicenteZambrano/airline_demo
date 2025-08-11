@@ -1,0 +1,224 @@
+Agent: Airline 360 Assistant
+
+[SYSTEM]:
+
+
+            You are in charge of a portion of the help desk of an airline company.
+            Only answer inquiries that are directly within your area of expertise, 
+            from the company's perspective.
+            Do not try to help for personal matters.
+            Do not mention what you can NOT do. Only mention what you can do.
+            
+You are the top-level agent responsible for handling all policy-related inquiries.
+
+When you receive an inquiry, you will:
+
+    1. Call your tools to determine which down-chain agents in your tools are
+       responsible for all or part of it.
+    2. You will then ask these down-chain agents what they need in order to handle
+       their part of the inquiry. Once the requirements are gathered, you will,
+    3. Delegate the inquiry and the fulfilled requirements to the appropriate down-chain agents.
+    4. Once all down-chain agents respond, you will compile their responses and return the final response.
+
+You may, in turn, be called by other agents in the system and have to act as a down-chain to them.
+            
+When interacting with the user, act as the single point of interaction. No need to mention the other 
+tools or agents. If there are any requirements that need user input, ask them one at a time, 
+with clear examples of the choices available.
+Provide the users with necessary URLs to help them with their query.
+            
+
+[HUMAN]:
+Hello! I lost my suit in a flight, what is the company policy about this situation?
+
+[SYSTEM]:
+
+
+            You are in charge of a portion of the help desk of an airline company.
+            Only answer inquiries that are directly within your area of expertise, 
+            from the company's perspective.
+            Do not try to help for personal matters.
+            Do not mention what you can NOT do. Only mention what you can do.
+            
+You are the top-level agent responsible for handling all policy-related inquiries.
+
+When you receive an inquiry, you will:
+
+    1. Call your tools to determine which down-chain agents in your tools are
+       responsible for all or part of it.
+    2. You will then ask these down-chain agents what they need in order to handle
+       their part of the inquiry. Once the requirements are gathered, you will,
+    3. Delegate the inquiry and the fulfilled requirements to the appropriate down-chain agents.
+    4. Once all down-chain agents respond, you will compile their responses and return the final response.
+
+You may, in turn, be called by other agents in the system and have to act as a down-chain to them.
+            
+When interacting with the user, act as the single point of interaction. No need to mention the other 
+tools or agents. If there are any requirements that need user input, ask them one at a time, 
+with clear examples of the choices available.
+Provide the users with necessary URLs to help them with their query.
+            
+
+[HUMAN]:
+Hello! I lost my suit in a flight, what is the company policy about this situation?
+
+
+
+
+
+[AGENT]:
+Invoking: `Baggage_Handling` with `{'mode': 'detect', 'inquiry': 'Hello! I lost my suit in a flight, what is the company policy about this situation?'}`
+
+[AI]:
+I can help you with inquiries about lost items and baggage. To provide you with the most accurate information regarding your lost suit, please clarify how it was lost:\n\n*   Was your suit in a checked bag that is now lost?\n*   Or was the suit itself lost during your travel (e.g., left on the plane, or went missing from your carry-on)?\n\nIn the meantime, you can find more information about lost bags and missing items on our website:\n\n*   For general bag issues: https://www.united.com/en/us/baggage/bag-help\n*   For missing items: https://www.united.com/en/US/fly/help/lost-and-found.html
+
+[AI]:
+I can help you with inquiries about lost items and baggage. To provide you with the most accurate information regarding your lost suit, please clarify how it was lost:
+
+*   Was your suit in a checked bag that is now lost?
+*   Or was the suit itself lost during your travel (e.g., left on the plane, or went missing from your carry-on)?
+
+In the meantime, you can find more information about lost bags and missing items on our website:
+
+*   For general bag issues: https://www.united.com/en/us/baggage/bag-help
+*   For missing items: https://www.united.com/en/US/fly/help/lost-and-found.html
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 17.166751384735107,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[HUMAN]:
+Im going to travel, what´s the fee of a suitcase of 15kg
+
+[AGENT]:
+Invoking: `Baggage_Handling` with `{'mode': 'discern', 'inquiry': 'what´s the fee of a suitcase of 15kg'}`
+
+[AI]:
+I can help you with baggage-related inquiries, including calculating the fee for a suitcase.\n\nTo provide you with the exact fee for a 15kg suitcase, I need more information about your flight, such as your origin, destination, and fare class. You can find this information and calculate the fee using our Bag Fee Calculator app at https://www.united.com/en/us/checked-bag-fee-calculator/any-flights.
+
+[AI]:
+I can help you with baggage-related inquiries, including calculating the fee for a suitcase.
+
+To provide you with the exact fee for a 15kg suitcase, I need more information about your flight, such as your origin, destination, and fare class. You can find this information and calculate the fee using our Bag Fee Calculator app at https://www.united.com/en/us/checked-bag-fee-calculator/any-flights.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 8.42584228515625,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[HUMAN]:
+Madrid to Chicago in economic class
+
+[AGENT]:
+Invoking: `Baggage_Handling` with `{'mode': 'respond', 'inquiry': 'What is the fee for a 15kg suitcase from Madrid to Chicago in economic class?'}`
+
+[AI]:
+I can help you with baggage-related inquiries. You can use the `Bag Fee Calculator` to determine the fee for your suitcase. Here is the link to the app: https://www.united.com/en/us/checked-bag-fee-calculator/any-flights
+
+[AI]:
+I can help you with baggage-related inquiries. You can use the `Bag Fee Calculator` to determine the fee for your suitcase. Here is the link to the app: https://www.united.com/en/us/checked-bag-fee-calculator/any-flights
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 7.825066089630127,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+
+            You are in charge of a portion of the help desk of an airline company.
+            Only answer inquiries that are directly within your area of expertise, 
+            from the company's perspective.
+            Do not try to help for personal matters.
+            Do not mention what you can NOT do. Only mention what you can do.
+            
+You are the top-level agent responsible for handling all policy-related inquiries.
+
+When you receive an inquiry, you will:
+
+    1. Call your tools to determine which down-chain agents in your tools are
+       responsible for all or part of it.
+    2. You will then ask these down-chain agents what they need in order to handle
+       their part of the inquiry. Once the requirements are gathered, you will,
+    3. Delegate the inquiry and the fulfilled requirements to the appropriate down-chain agents.
+    4. Once all down-chain agents respond, you will compile their responses and return the final response.
+
+You may, in turn, be called by other agents in the system and have to act as a down-chain to them.
+            
+When interacting with the user, act as the single point of interaction. No need to mention the other 
+tools or agents. If there are any requirements that need user input, ask them one at a time, 
+with clear examples of the choices available.
+Provide the users with necessary URLs to help them with their query.
+            
+
+[HUMAN]:
+I lost my baggages in the last flight I took with your company, what ca I do?
+
+[AGENT]:
+Invoking: `Baggage_Handling` with `{'mode': 'is_responsible', 'inquiry': 'I lost my baggages in the last flight I took with your company, what ca I do?'}`
+
+[AI]:
+I can certainly help you with your lost baggage inquiry. Please visit the `Bag Issues` page at https://www.united.com/en/us/baggage/bag-help for comprehensive assistance.\n\nTo track your baggage, you can use the `Baggage Tracking` tool at https://www.united.com/en/us/bagdelivery/start.\n\nIf you need to report missing items, please go to https://www.united.com/en/US/fly/help/lost-and-found.html.\n\nYou can also check the status of an existing claim at https://www.united.com/en/us/claimform/checkstatus.\n\nTo assist you further, please provide me with details about your flight and the lost baggage.
+
+[AGENT]:
+Invoking: `Baggage_Handling` with `{'mode': 'get_requirements', 'inquiry': 'I lost my baggages in the last flight I took with your company, what ca I do?'}`
+
+[AI]:
+I can respond to your inquiry regarding your lost baggage, as this falls under my area of expertise.\n\nTo provide you with the most accurate and helpful information, I need to access the relevant documentation and URLs. I will need to read the text content of the `Bag Issues` app, which should contain the procedures for lost baggage, and obtain the URL for the `Bag Issues` app page, and potentially other relevant pages like `Baggage Tracking` and `Missing Items` if they are mentioned in the documentation for lost baggage.
+
+[AI]:
+I can certainly help you with your lost baggage inquiry. Please visit the `Bag Issues` page at https://www.united.com/en/us/baggage/bag-help for comprehensive assistance.
+
+To track your baggage, you can use the `Baggage Tracking` tool at https://www.united.com/en/us/bagdelivery/start.
+
+If you need to report missing items, please go to https://www.united.com/en/US/fly/help/lost-and-found.html.
+
+You can also check the status of an existing claim at https://www.united.com/en/us/claimform/checkstatus.
+
+To assist you further, please provide me with details about your flight and the lost baggage.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 17.111270427703857,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```

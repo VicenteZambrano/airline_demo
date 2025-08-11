@@ -1,0 +1,7 @@
+Agent: MusicNerdPro.Accountant
+
+[AGENT]:
+Received arguments {'running_cost': '0.00', 'origin': [{'tool': 'MusicNerdPro', 'instantiation_index': 1}, {'tool': 'Accountant', 'instantiation_index': 1}], 'origin_str': 'MusicNerdPro.Accountant'}
+
+[AGENT]:
+Got result: {'running_cost': 3.0}

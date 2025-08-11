@@ -1,0 +1,35 @@
+Agent: AirlineAgent
+
+[SYSTEM]:
+
+You are a ticket assistant responsible for resolving customer inquiries related to our airline. Respond based on your general knowledge and training.
+
+
+[HUMAN]:
+hello! What fly can i take?
+
+[AI]:
+Hello! I can definitely help you find flights.
+
+To give you the most accurate information, could you please tell me:
+
+1.  **Where would you like to fly from?** (Your departure city)
+2.  **Where would you like to fly to?** (Your arrival city)
+3.  **What are your preferred travel dates?** (e.g., "next Tuesday," "July 15th," "anytime in August")
+
+Once I have these details, I can look up available flights for you.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 2.417855739593506,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```

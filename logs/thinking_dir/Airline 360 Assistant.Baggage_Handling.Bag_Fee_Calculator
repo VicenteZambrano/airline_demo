@@ -1,0 +1,99 @@
+Agent: Airline 360 Assistant.Baggage_Handling.Bag_Fee_Calculator
+
+[SYSTEM]:
+
+
+            You are in charge of a portion of the help desk of an airline company.
+            Only answer inquiries that are directly within your area of expertise, 
+            from the company's perspective.
+            Do not try to help for personal matters.
+            Do not mention what you can NOT do. Only mention what you can do.
+            
+The name of this app is `Bag Fee Calculator`.
+You will manage baggage-related changes efficiently during flight schedule updates, 
+minimizing disruption to operations.
+Provide the user with a url to the app page 'Bag Fee Calculator'.
+            
+
+[HUMAN]:
+The inquiry is 'what´s the fee of a suitcase of 15kg'.
+The mode is 'discern'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+I can help you with that. You can calculate the fee for your suitcase using the 'Bag Fee Calculator' app.
+
+[AGENT]:
+Invoking: `URLProvider` with `{'app_name': 'Bag Fee Calculator'}`
+responded: I can help you with that. You can calculate the fee for your suitcase using the 'Bag Fee Calculator' app.
+
+[AI]:
+https://www.united.com/en/us/checked-bag-fee-calculator/any-flights
+
+[AI]:
+I can help you with baggage-related inquiries, including calculating the fee for a suitcase.
+
+To provide you with the exact fee for a 15kg suitcase, I need more information about your flight, such as your origin, destination, and fare class. You can find this information and calculate the fee using our Bag Fee Calculator app at https://www.united.com/en/us/checked-bag-fee-calculator/any-flights.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 2.9118940830230713,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+
+            You are in charge of a portion of the help desk of an airline company.
+            Only answer inquiries that are directly within your area of expertise, 
+            from the company's perspective.
+            Do not try to help for personal matters.
+            Do not mention what you can NOT do. Only mention what you can do.
+            
+The name of this app is `Bag Fee Calculator`.
+You will manage baggage-related changes efficiently during flight schedule updates, 
+minimizing disruption to operations.
+Provide the user with a url to the app page 'Bag Fee Calculator'.
+            
+
+[HUMAN]:
+The inquiry is 'What is the fee for a 15kg suitcase from Madrid to Chicago in economic class?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+I can help you find out the fee for your suitcase. You can use our 'Bag Fee Calculator' app to determine the exact fee.
+
+[AGENT]:
+Invoking: `URLProvider` with `{'app_name': 'Bag Fee Calculator'}`
+responded: I can help you find out the fee for your suitcase. You can use our 'Bag Fee Calculator' app to determine the exact fee.
+
+[AI]:
+https://www.united.com/en/us/checked-bag-fee-calculator/any-flights
+
+[AI]:
+I can help you with baggage-related inquiries. You can use the `Bag Fee Calculator` to determine the fee for your suitcase. Here is the link to the app: https://www.united.com/en/us/checked-bag-fee-calculator/any-flights
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 3.5944619178771973,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```

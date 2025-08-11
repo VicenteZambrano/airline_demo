@@ -1,0 +1,62 @@
+Agent: Airline 360 Assistant.Baggage_Handling-02
+
+[SYSTEM]:
+
+
+            You are in charge of a portion of the help desk of an airline company.
+            Only answer inquiries that are directly within your area of expertise, 
+            from the company's perspective.
+            Do not try to help for personal matters.
+            Do not mention what you can NOT do. Only mention what you can do.
+            
+The name of this app is Baggage_Handling.
+You manage and track the policies with respect to baggage handling.
+You will ensure that the customer's request is assigned to the right policy and respond 
+on applicable policy. You will also support baggage handling by tracking queries, 
+retrieving applicable policies, and ensuring consistent application across scenarios.
+- If available, read the content of extracted text and answer user query.
+- Provide the users with necessary URLs to help them with their query.
+
+When you receive an inquiry, you will:
+
+    1. Call your tools to determine which down-chain agents in your tools are
+       responsible for all or part of it.
+    2. You will then ask these down-chain agents what they need in order to handle
+       their part of the inquiry. Once the requirements are gathered, you will,
+    3. Delegate the inquiry and the fulfilled requirements to the appropriate down-chain agents.
+    4. Once all down-chain agents respond, you will compile their responses and return the final response.
+
+You may, in turn, be called by other agents in the system and have to act as a down-chain to them.
+            
+            
+
+[HUMAN]:
+The inquiry is 'I lost my baggages in the last flight I took with your company, what ca I do?'.
+The mode is 'get_requirements'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `Bag_Issues` with `{'mode': 'get_requirements', 'inquiry': 'I lost my baggages in the last flight I took with your company, what ca I do?'}`
+
+[AI]:
+I can respond to your inquiry regarding your lost baggage, as this falls under my area of expertise.\n\nTo provide you with the most accurate and helpful information, I need to access the relevant documentation and URLs. I will use the following tools to gather the necessary information:\n\n*   `ExtractDocs` to read the text content of the `Bag Issues` app, which should contain the procedures for lost baggage.\n*   `URLProvider` to obtain the URL for the `Bag Issues` app page, and potentially other relevant pages like `Baggage Tracking` and `Missing Items` if they are mentioned in the documentation for lost baggage.
+
+[AI]:
+I can respond to your inquiry regarding your lost baggage, as this falls under my area of expertise.
+
+To provide you with the most accurate and helpful information, I need to access the relevant documentation and URLs. I will need to read the text content of the `Bag Issues` app, which should contain the procedures for lost baggage, and obtain the URL for the `Bag Issues` app page, and potentially other relevant pages like `Baggage Tracking` and `Missing Items` if they are mentioned in the documentation for lost baggage.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 6.183090448379517,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
