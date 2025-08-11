@@ -173,8 +173,49 @@ llm_config {
             {aaosa_instructions}
                 """
                 command = "aaosa_command"
-                tools = []
+                tools = ["IncidentDBTool","HumanEscalationTool","EmailNotificationTool","DocumentSummarizer"]
             },
+            {
+            "name": "IncidentDBTool",
+            "function": "aaosa_call",
+            "instructions": """
+                {instructions_prefix}
+                Logs a customer incident with details such as type and description.
+                {aaosa_instructions}
+            """,
+            "command": "aaosa_command",
+        },
+        {
+            "name": "HumanEscalationTool",
+            "function": "aaosa_call",
+            "instructions": """
+                {instructions_prefix}
+                Escalates an unresolved incident to a human support agent.
+                {aaosa_instructions}
+            """,
+            "command": "aaosa_command",
+        },
+        {
+            "name": "EmailNotificationTool",
+            "function": "aaosa_call",
+            "instructions": """
+                {instructions_prefix}
+                Sends an email notification to a customer regarding an incident update.
+                {aaosa_instructions}
+            """,
+            "command": "aaosa_command",
+        },
+         {
+            "name": "DocumentSummarizer",
+            "function": "aaosa_call",
+            "instructions": """
+                {instructions_prefix}
+                Summarizes a conversation history or incident description to create a concise log entry for database storage or human escalation.
+                {aaosa_instructions}
+            """,
+            "command": "aaosa_command",
+        },
+       
 
             {
                 name = "FAQAgent"
@@ -190,8 +231,19 @@ llm_config {
             {aaosa_instructions}
                 """
                 command = "aaosa_command"
-                tools = []
+                tools = ["RAGTool"]
             },
+
+            {
+            "name": "RAGTool",
+            "function": "aaosa_call",
+            "instructions": """
+                {instructions_prefix}
+                Retrieves answers to customer questions from internal airline documents using RAG (Retrieval-Augmented Generation).
+                {aaosa_instructions}
+            """,
+            "command": "aaosa_command",
+        },
 
 
     ]
