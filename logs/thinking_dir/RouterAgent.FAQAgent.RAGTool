@@ -1,0 +1,22 @@
+Agent: RouterAgent.FAQAgent.RAGTool
+
+[AGENT]:
+Received arguments {'query': 'faq policy', 'urls': ['https://plone.allianceair.in/allianceair/en/assets/faqs/faqs.pdf'], 'save_vector_store': True, 'vector_store_path': 'vector_store.json', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+Received arguments {'query': 'What is the date change fee for domestic sector?', 'urls': ['https://plone.allianceair.in/allianceair/en/assets/faqs/faqs.pdf'], 'save_vector_store': True, 'vector_store_path': 'vector_store.json', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+Received arguments {'query': 'What is the date change fee for domestic sector?', 'urls': ['https://plone.allianceair.in/allianceair/en/assets/faqs/faqs.pdf'], 'save_vector_store': True, 'vector_store_path': 'vector_store.json', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+Received arguments {'user_query': 'Do you allow service animals?', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+
+Running CodedTool class RagTool.invoke() synchronously in an asynchronous environment.
+This can lead to performance problems when running within a server. Consider porting to the async_invoke() method.
+
+
+[AGENT]:
+Got result: Yes, service animals are allowed. Required documentation must be provided at least 48 hours before your flight.

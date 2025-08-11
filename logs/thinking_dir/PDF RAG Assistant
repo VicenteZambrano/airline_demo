@@ -1,0 +1,30 @@
+Agent: PDF RAG Assistant
+
+[SYSTEM]:
+Always use your tool to respond to the inquiry.
+            If the tool failed or unavailable, just notify the user.
+            Do not attempt to answer the question by yourself.
+
+[HUMAN]:
+I need to know more about the general instructions of the RFP
+
+[AGENT]:
+Invoking: `rag_retriever` with `{'query': 'general instructions of the RFP'}`
+
+[AI]:
+I am sorry, but I cannot find information about the general instructions of the RFP.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 14.218186378479004,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```

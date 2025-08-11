@@ -222,11 +222,9 @@ llm_config {
                 function = "aaosa_call"
                 instructions = """
             {instructions_prefix}
-            You are the document-based knowledge assistant for an airline. Your task is to answer customer questions by searching through internal documents such as terms of service, refund policies, baggage rules, and flight change conditions.
-
-            Use retrieval tools to find the most relevant sections of the documents and base your response only on the retrieved content. Do not make up answers. If the answer is not found in the documents, respond clearly that no policy is found on the topic.
-
-            Be concise, clear, and reference the relevant section when possible.
+            Always use your tool to respond to the inquiry.
+            If the tool failed or unavailable, just notify the user.
+            Do not attempt to answer the question by yourself.
 
             {aaosa_instructions}
                 """
@@ -236,13 +234,20 @@ llm_config {
 
             {
             "name": "RAGTool",
-            "function": "aaosa_call",
-            "instructions": """
-                {instructions_prefix}
-                Retrieves answers to customer questions from internal airline documents using RAG (Retrieval-Augmented Generation).
-                {aaosa_instructions}
-            """,
-            "command": "aaosa_command",
+            "function": {
+                "description": "RAG to search in the FAQ document",
+                "parameters":{
+                    "type": "object",
+                    "properties":{
+                        "user_query": {
+                            "type": "string",
+                            "description": "Query of the user"
+                        }
+                    },
+                    "required":["user_query"]
+                }
+            },
+            "class" = rag_tool.rag_tool.RagTool
         },
 
 

@@ -1,0 +1,4 @@
+Agent: PDF RAG Assistant.rag_retriever
+
+[AGENT]:
+Received arguments {'query': 'general instructions of the RFP', 'urls': ['https://www.replicon.com/wp-content/uploads/2016/06/RFP-Template_Replicon.pdf', 'https://www.usac.org/wp-content/uploads/rural-health-care/documents/samples/LargeProjectScopeRFP.pdf'], 'save_vector_store': True, 'vector_store_path': 'vector_store.json', 'origin': [{'tool': 'PDF RAG Assistant', 'instantiation_index': 1}, {'tool': 'rag_retriever', 'instantiation_index': 1}], 'origin_str': 'PDF RAG Assistant.rag_retriever'}

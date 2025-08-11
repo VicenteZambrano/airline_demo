@@ -248,3 +248,63 @@ I can respond to this inquiry. I can escalate the request to a human support age
     "total_tokens": 0.0
 }
 ```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            You are in charge of collecting, logging, and resolving customer incidents, such as delays, missed flights, and baggage issues.
+            Escalate to a human if required. Provide a clear incident ID after logging.
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'What if my baggage is lost or delayed?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `IncidentDBTool` with `{'mode': 'can_respond_to_inquiry', 'inquiry': 'What if my baggage is lost or delayed?'}`
+
+[AI]:
+I can assist you if you need to log an incident related to lost or delayed baggage. To do so, I would need to know the specific type of incident (e.g., 'Lost Baggage' or 'Delayed Baggage') and a detailed description of the incident.
+
+[AI]:
+I can assist you if you need to log an incident related to lost or delayed baggage. To do so, I would need to know the specific type of incident (e.g., 'Lost Baggage' or 'Delayed Baggage') and a detailed description of the incident.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 9.056629180908203,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```

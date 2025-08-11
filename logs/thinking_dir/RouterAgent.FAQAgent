@@ -57,3 +57,633 @@ Yes, I can respond to the inquiry about your privacy policy. I can search throug
     "total_tokens": 0.0
 }
 ```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            You are the document-based knowledge assistant for an airline. Your task is to answer customer questions by searching through internal documents such as terms of service, refund policies, baggage rules, and flight change conditions.
+
+            Use retrieval tools to find the most relevant sections of the documents and base your response only on the retrieved content. Do not make up answers. If the answer is not found in the documents, respond clearly that no policy is found on the topic.
+
+            Be concise, clear, and reference the relevant section when possible.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'how much time can i cancle a flight?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can respond to the inquiry using the RAGTool to search for information about flight cancellation policies in the airline's documents. I have all the necessary information to respond.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 1.7182745933532715,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            You are the document-based knowledge assistant for an airline. Your task is to answer customer questions by searching through internal documents such as terms of service, refund policies, baggage rules, and flight change conditions.
+
+            Use retrieval tools to find the most relevant sections of the documents and base your response only on the retrieved content. Do not make up answers. If the answer is not found in the documents, respond clearly that no policy is found on the topic.
+
+            Be concise, clear, and reference the relevant section when possible.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'summarize the faq policy'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can respond to the inquiry. I will use the `RAGTool` to retrieve and summarize the FAQ policy. I do not need any additional information to do this.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 1.1308724880218506,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            You are the document-based knowledge assistant for an airline. Your task is to answer customer questions by searching through internal documents such as terms of service, refund policies, baggage rules, and flight change conditions.
+
+            Use retrieval tools to find the most relevant sections of the documents and base your response only on the retrieved content. Do not make up answers. If the answer is not found in the documents, respond clearly that no policy is found on the topic.
+
+            Be concise, clear, and reference the relevant section when possible.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'summarize the faq policy'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can respond to the inquiry. I can use the `RAGTool` to summarize the FAQ policy. I have all the information I need.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 1.1115314960479736,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            You are the document-based knowledge assistant for an airline. Your task is to answer customer questions by searching through internal documents such as terms of service, refund policies, baggage rules, and flight change conditions.
+
+            Use retrieval tools to find the most relevant sections of the documents and base your response only on the retrieved content. Do not make up answers. If the answer is not found in the documents, respond clearly that no policy is found on the topic.
+
+            Be concise, clear, and reference the relevant section when possible.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'summarize the faq policy'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can respond to the inquiry by summarizing the FAQ policy. I will use my document retrieval tool to find the FAQ policy and then provide a summary based on the retrieved content. I do not need any further information from you to do this.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 2.020609140396118,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            Always use your tool to respond to the inquiry.
+            If the tool failed or unavailable, just notify the user.
+            Do not attempt to answer the question by yourself.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'summarize the faq policy'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `RAGTool` with `{'query': 'faq policy'}`
+
+[AI]:
+I can summarize the FAQ policy if you provide me with the content of the policy.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 31.076792001724243,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            Always use your tool to respond to the inquiry.
+            If the tool failed or unavailable, just notify the user.
+            Do not attempt to answer the question by yourself.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'What is the date change fee for domestic sector?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `RAGTool` with `{'query': 'What is the date change fee for domestic sector?'}`
+
+[AI]:
+I cannot respond to this inquiry, as I do not have information on the date change fee for the domestic sector.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 10.675410270690918,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            Always use your tool to respond to the inquiry.
+            If the tool failed or unavailable, just notify the user.
+            Do not attempt to answer the question by yourself.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'What is the date change fee for domestic sector?'.
+The mode is 'detect'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `RAGTool` with `{'query': 'What is the date change fee for domestic sector?'}`
+
+[AI]:
+I am unable to respond to the inquiry as I do not have information regarding the date change fee for domestic sectors.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 12.855401039123535,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            Always use your tool to respond to the inquiry.
+            If the tool failed or unavailable, just notify the user.
+            Do not attempt to answer the question by yourself.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'Can I change my booking after purchase?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `RAGTool` with `{'user_query': 'Can I change my booking after purchase?'}`
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            Always use your tool to respond to the inquiry.
+            If the tool failed or unavailable, just notify the user.
+            Do not attempt to answer the question by yourself.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'Do you allow service animals?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `RAGTool` with `{'user_query': 'Do you allow service animals?'}`
+
+[AI]:
+I can respond to the inquiry "Do you allow service animals?". I have already executed the `RAGTool` and it does not require any additional information from you.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 2.915419340133667,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            Always use your tool to respond to the inquiry.
+            If the tool failed or unavailable, just notify the user.
+            Do not attempt to answer the question by yourself.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'Is Wi-Fi available?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `RAGTool` with `{'user_query': 'Is Wi-Fi available?'}`
+
+[AI]:
+I can respond to the inquiry and I do not need any additional information to respond.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 2.0486762523651123,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+            
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+            Always use your tool to respond to the inquiry.
+            If the tool failed or unavailable, just notify the user.
+            Do not attempt to answer the question by yourself.
+
+            
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+                
+
+[HUMAN]:
+The inquiry is 'Do you allow service animals?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AGENT]:
+Invoking: `RAGTool` with `{'user_query': 'Do you allow service animals?'}`
+
+[AI]:
+Yes, service animals are allowed. Required documentation must be provided at least 48 hours before your flight.
+
+[AI]:
+Yes, service animals are allowed. Required documentation must be provided at least 48 hours before your flight.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 7.887244939804077,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
