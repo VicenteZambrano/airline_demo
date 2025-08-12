@@ -20,3 +20,99 @@ This can lead to performance problems when running within a server. Consider por
 
 [AGENT]:
 Got result: Yes, service animals are allowed. Required documentation must be provided at least 48 hours before your flight.
+
+[AGENT]:
+Received arguments {'user_query': 'How do I reach customer service?', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+
+Running CodedTool class RagTool.invoke() synchronously in an asynchronous environment.
+This can lead to performance problems when running within a server. Consider porting to the async_invoke() method.
+
+
+[AGENT]:
+Got result: You can reach customer service through the following methods:
+*   **Phone:** Call the 24/7 hotline listed on their Contact page.
+*   **Email:** Send an email to support@[airline].com.
+*   **Live Chat:** This is available on their website and mobile app.
+*   **Chatbot:** You can talk directly with their chatbot anytime for quick assistance.
+
+[AGENT]:
+Received arguments {'user_query': 'How do I reach customer service?', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+
+Running CodedTool class RagTool.invoke() synchronously in an asynchronous environment.
+This can lead to performance problems when running within a server. Consider porting to the async_invoke() method.
+
+
+[AGENT]:
+Got result: You can reach customer service through the following methods:
+*   **Phone:** A 24/7 hotline listed on their Contact page.
+*   **Email:** support@[airline].com.
+*   **Live Chat:** Available on their website and mobile app.
+*   **Chatbot:** You can talk directly with their chatbot anytime for quick assistance.
+
+[AGENT]:
+Received arguments {'user_query': 'How do I reach customer service?', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+
+Running CodedTool class RagTool.invoke() synchronously in an asynchronous environment.
+This can lead to performance problems when running within a server. Consider porting to the async_invoke() method.
+
+
+[AGENT]:
+Got result: You can reach customer service through the following methods:
+*   **Phone:** 24/7 hotline listed on the Contact page.
+*   **Email:** support@[airline].com.
+*   **Live Chat:** Available on the website and mobile app.
+*   **Chatbot:** You can talk directly with the chatbot anytime for quick assistance.
+
+[AGENT]:
+Received arguments {'user_query': 'How do I reach the costumer service?', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+
+Running CodedTool class RagTool.invoke() synchronously in an asynchronous environment.
+This can lead to performance problems when running within a server. Consider porting to the async_invoke() method.
+
+
+[AGENT]:
+Got result: You can reach customer service through the following methods:
+*   **Phone:** Call the 24/7 hotline listed on their Contact page.
+*   **Email:** Send an email to support@[airline].com.
+*   **Live Chat:** Available on their website and mobile app.
+*   **Chatbot:** You can also talk directly with their chatbot anytime for quick assistance.
+
+[AGENT]:
+Received arguments {'user_query': 'How do I reach the costumer service?', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+
+Running CodedTool class RagTool.invoke() synchronously in an asynchronous environment.
+This can lead to performance problems when running within a server. Consider porting to the async_invoke() method.
+
+
+[AGENT]:
+Got result: You can reach customer service through the following methods:
+*   **Phone:** Call the 24/7 hotline listed on their Contact page.
+*   **Email:** Send an email to support@[airline].com.
+*   **Live Chat:** This is available on their website and mobile app.
+*   You can also talk directly with their chatbot anytime for quick assistance.
+
+[AGENT]:
+Received arguments {'user_query': 'How do I reach the costumer service?', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+
+Running CodedTool class RagTool.invoke() synchronously in an asynchronous environment.
+This can lead to performance problems when running within a server. Consider porting to the async_invoke() method.
+
+
+[AGENT]:
+Got result: You can reach customer service via:
+*   Phone: 24/7 hotline listed on their Contact page.
+*   Email: support@[airline].com.
+*   Live Chat: Available on their website and mobile app.
+*   You can also talk directly with their chatbot anytime for quick assistance.

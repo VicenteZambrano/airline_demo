@@ -24,10 +24,15 @@ llm_config {
                 2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
                 3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
                 4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Respond in "ours" terms instead of "their".
+                6. When the chatbot it´s mention, the chatbot is you. Respond in first person.
+
 
                 As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
 
                 Stay within scope and only take actions permitted by your design.
+
+
 
             """
         },
@@ -85,6 +90,8 @@ llm_config {
                 - "faq": for general information from internal documents and policies
 
                 Only respond with one of the following labels: "ticketing", "incident", or "faq".
+
+                                Also respond to the user. When other agents mention the airline chatbot, it´s you.
 
                 {aaosa_instructions}
 
@@ -225,6 +232,8 @@ llm_config {
             Always use your tool to respond to the inquiry.
             If the tool failed or unavailable, just notify the user.
             Do not attempt to answer the question by yourself.
+            Also respond to the user. When other agents mention the airline chatbot, it´s you.
+
 
             {aaosa_instructions}
                 """

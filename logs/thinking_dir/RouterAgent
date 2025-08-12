@@ -1445,3 +1445,492 @@ Yes, service animals are allowed. Required documentation must be provided at lea
     "total_tokens": 0.0
 }
 ```
+
+[SYSTEM]:
+
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+
+                You are a smart routing assistant for an airline chatbot. Your task is to analyze the user's message and determine the intent behind it. Choose whether the user needs help with ticket booking or modifications, is reporting a problem or incident, or is simply asking for general information (like baggage policy, refund rules, etc.).
+
+                Possible routes:
+                - "ticketing": for booking, modifying, canceling, or checking flights
+                - "incident": for complaints, missed flights, lost baggage, delays, etc.
+                - "faq": for general information from internal documents and policies
+
+                Only respond with one of the following labels: "ticketing", "incident", or "faq".
+
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+
+        
+
+[HUMAN]:
+How do I reach customer service?
+
+[AGENT]:
+Invoking: `IntentClassifier` with `{'mode': 'classify', 'inquiry': 'How do I reach customer service?'}`
+
+[AI]:
+The intent of the inquiry \"How do I reach customer service?\" is `faq`. I can fully respond to this part of the inquiry without needing any additional information.
+
+[AGENT]:
+Invoking: `FAQAgent` with `{'mode': 'respond', 'inquiry': 'How do I reach customer service?'}`
+
+[AI]:
+You can reach customer service through the following methods:\n*   **Phone:** Call the 24/7 hotline listed on their Contact page.\n*   **Email:** Send an email to support@[airline].com.\n*   **Live Chat:** This is available on their website and mobile app.\n*   **Chatbot:** You can talk directly with their chatbot anytime for quick assistance.\n
+
+[AI]:
+You can reach customer service through the following methods:
+*   **Phone:** Call the 24/7 hotline listed on their Contact page.
+*   **Email:** Send an email to support@[airline].com.
+*   **Live Chat:** This is available on their website and mobile app.
+*   **Chatbot:** You can talk directly with their chatbot anytime for quick assistance.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 19.51719093322754,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+
+                You are a smart routing assistant for an airline chatbot. Your task is to analyze the user's message and determine the intent behind it. Choose whether the user needs help with ticket booking or modifications, is reporting a problem or incident, or is simply asking for general information (like baggage policy, refund rules, etc.).
+
+                Possible routes:
+                - "ticketing": for booking, modifying, canceling, or checking flights
+                - "incident": for complaints, missed flights, lost baggage, delays, etc.
+                - "faq": for general information from internal documents and policies
+
+                Only respond with one of the following labels: "ticketing", "incident", or "faq".
+
+                Also respond to the user. When other agents mention the airline chatbot, it´s you.
+
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+
+        
+
+[HUMAN]:
+How do I reach customer service?
+
+
+
+[AGENT]:
+Invoking: `IntentClassifier` with `{'mode': 'partial', 'inquiry': 'How do I reach customer service?'}`
+
+[AI]:
+I can respond to parts of this inquiry. My role is to classify the intent of the user's message.\n\nI can classify \"How do I reach customer service?\" as an 'faq' intent.\n\nI do not need any additional information to perform this classification. I cannot provide the actual customer service contact details, as that falls outside my domain of expertise.
+
+[AGENT]:
+Invoking: `FAQAgent` with `{'mode': 'respond', 'inquiry': 'How do I reach customer service?'}`
+
+[AI]:
+The inquiry is about how to reach customer service. I can fully respond to this inquiry by providing the available contact methods. I have all the necessary information and do not require any additional parameters.\n
+
+[AGENT]:
+Invoking: `FAQAgent` with `{'mode': 'respond', 'inquiry': 'How do I reach customer service?'}`
+
+[AI]:
+You can reach customer service through the following methods:\\n*   **Phone:** A 24/7 hotline listed on the Contact page.\\n*   **Email:** support@[airline].com\\n*   **Live Chat:** Available on the website and mobile app.\\n*   **Chatbot:** Available anytime for quick assistance.
+
+[AI]:
+You can reach customer service through the following methods:
+*   **Phone:** A 24/7 hotline listed on the Contact page.
+*   **Email:** support@[airline].com
+*   **Live Chat:** Available on the website and mobile app.
+*   **Chatbot:** Available anytime for quick assistance.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 41.62971568107605,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+
+                You are a smart routing assistant for an airline chatbot. Your task is to analyze the user's message and determine the intent behind it. Choose whether the user needs help with ticket booking or modifications, is reporting a problem or incident, or is simply asking for general information (like baggage policy, refund rules, etc.).
+
+                Possible routes:
+                - "ticketing": for booking, modifying, canceling, or checking flights
+                - "incident": for complaints, missed flights, lost baggage, delays, etc.
+                - "faq": for general information from internal documents and policies
+
+                Only respond with one of the following labels: "ticketing", "incident", or "faq".
+
+                                Also respond to the user. When other agents mention the airline chatbot, it´s you.
+
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+
+        
+
+[HUMAN]:
+How do I reach customer service?
+
+
+
+[AGENT]:
+Invoking: `IntentClassifier` with `{'mode': 'respond', 'inquiry': 'How do I reach customer service?'}`
+
+[AI]:
+I can respond to this inquiry. The intent of the message is a Frequently Asked Question (FAQ). I do not require any additional information.
+
+[AGENT]:
+Invoking: `FAQAgent` with `{'mode': 'respond', 'inquiry': 'How do I reach customer service?'}`
+
+[AI]:
+You can reach customer service through the following methods:\n*   **Phone:** 24/7 hotline listed on the Contact page.\n*   **Email:** support@[airline].com.\n*   **Live Chat:** Available on the website and mobile app.\n*   **Chatbot:** You can talk directly with the chatbot anytime for quick assistance.\n
+
+[AI]:
+You can reach customer service through the following methods:\n*   **Phone:** 24/7 hotline listed on the Contact page.\n*   **Email:** support@[airline].com.\n*   **Live Chat:** Available on the website and mobile app.\n*   **Chatbot:** You can talk directly with the chatbot anytime for quick assistance.\n
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 8.930493354797363,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+
+                You are a smart routing assistant for an airline chatbot. Your task is to analyze the user's message and determine the intent behind it. Choose whether the user needs help with ticket booking or modifications, is reporting a problem or incident, or is simply asking for general information (like baggage policy, refund rules, etc.).
+
+                Possible routes:
+                - "ticketing": for booking, modifying, canceling, or checking flights
+                - "incident": for complaints, missed flights, lost baggage, delays, etc.
+                - "faq": for general information from internal documents and policies
+
+                Only respond with one of the following labels: "ticketing", "incident", or "faq".
+
+                                Also respond to the user. When other agents mention the airline chatbot, it´s you.
+
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+
+        
+
+[HUMAN]:
+How do I reach  the costumer service?
+
+[AGENT]:
+Invoking: `IntentClassifier` with `{'mode': 'respond', 'inquiry': 'How do I reach the costumer service?'}`
+
+[AI]:
+I can classify the intent of this inquiry. The intent is 'faq'. I do not require any additional information to perform this classification.
+
+[AGENT]:
+Invoking: `FAQAgent` with `{'mode': 'respond', 'inquiry': 'How do I reach the costumer service?'}`
+
+[AI]:
+You can reach customer service through the following methods:\n*   **Phone:** Call the 24/7 hotline listed on their Contact page.\n*   **Email:** Send an email to support@airline.com.\n*   **Live Chat:** Available on their website and mobile app.\n*   **Chatbot:** You can also talk directly with their chatbot anytime for quick assistance.
+
+[AI]:
+You can reach customer service through the following methods:
+*   **Phone:** Call the 24/7 hotline listed on their Contact page.
+*   **Email:** Send an email to support@airline.com.
+*   **Live Chat:** Available on their website and mobile app.
+*   **Chatbot:** You can also talk directly with their chatbot anytime for quick assistance.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 18.298527240753174,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+
+                You are a smart routing assistant for an airline chatbot. Your task is to analyze the user's message and determine the intent behind it. Choose whether the user needs help with ticket booking or modifications, is reporting a problem or incident, or is simply asking for general information (like baggage policy, refund rules, etc.).
+
+                Possible routes:
+                - "ticketing": for booking, modifying, canceling, or checking flights
+                - "incident": for complaints, missed flights, lost baggage, delays, etc.
+                - "faq": for general information from internal documents and policies
+
+                Only respond with one of the following labels: "ticketing", "incident", or "faq".
+
+                                Also respond to the user. When other agents mention the airline chatbot, it´s you.
+
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Respond in "ours" terms instead of "their".
+
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+                When other agents mention the airline chatbot, it´s you.
+
+
+            
+
+        
+
+[HUMAN]:
+How do I reach the costumer service?
+
+
+
+[AGENT]:
+Invoking: `IntentClassifier` with `{'mode': 'classify', 'inquiry': 'How do I reach the costumer service?'}`
+
+[AI]:
+We can classify this inquiry. This inquiry falls under the 'faq' intent. We do not require any additional information.
+
+[AGENT]:
+Invoking: `FAQAgent` with `{'mode': 'respond', 'inquiry': 'How do I reach the costumer service?'}`
+
+[AI]:
+You can reach our customer service through the following methods:\n\n*   **Phone:** Call the 24/7 hotline listed on our Contact page.\n*   **Email:** Send an email to support@our_airline.com.\n*   **Live Chat:** This is available on our website and mobile app.\n*   You can also talk directly with our chatbot anytime for quick assistance.
+
+[AI]:
+You can reach our customer service through the following methods:
+
+*   **Phone:** Call the 24/7 hotline listed on our Contact page.
+*   **Email:** Send an email to support@our_airline.com.
+*   **Live Chat:** This is available on our website and mobile app.
+*   You can also talk directly with our chatbot anytime for quick assistance.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 9.665359258651733,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+
+                You are a smart routing assistant for an airline chatbot. Your task is to analyze the user's message and determine the intent behind it. Choose whether the user needs help with ticket booking or modifications, is reporting a problem or incident, or is simply asking for general information (like baggage policy, refund rules, etc.).
+
+                Possible routes:
+                - "ticketing": for booking, modifying, canceling, or checking flights
+                - "incident": for complaints, missed flights, lost baggage, delays, etc.
+                - "faq": for general information from internal documents and policies
+
+                Only respond with one of the following labels: "ticketing", "incident", or "faq".
+
+                                Also respond to the user. When other agents mention the airline chatbot, it´s you.
+
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Respond in "ours" terms instead of "their".
+                6. When the chatbot it´s mention, the chatbot is you. Respond in first person.
+
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+
+
+            
+
+        
+
+[HUMAN]:
+How do I reach the costumer service?
+
+
+
+[AGENT]:
+Invoking: `FAQAgent` with `{'mode': 'respond', 'inquiry': 'How do I reach the costumer service?'}`
+
+[AI]:
+You can reach our customer service via:\n*   Phone: 24/7 hotline listed on our Contact page.\n*   Email: support@airline.com.\n*   Live Chat: Available on our website and mobile app.\n*   You can also talk directly with me anytime for quick assistance.
+
+[AI]:
+You can reach our customer service via:\n*   Phone: 24/7 hotline listed on our Contact page.\n*   Email: support@airline.com.\n*   Live Chat: Available on our website and mobile app.\n*   You can also talk directly with me anytime for quick assistance.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 7.307764291763306,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
