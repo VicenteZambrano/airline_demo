@@ -105,3 +105,15 @@ I can assist you if you need to log an incident related to lost or delayed bagga
     "total_tokens": 0.0
 }
 ```
+
+[AGENT]:
+Received arguments {'customer_name': 'Vicente Zambrano', 'issue_type': 'Lost Baggage', 'description': 'baggage lost on Madrid to Paris flight of August 4th', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'IssueAgent', 'instantiation_index': 1}, {'tool': 'IncidentDBTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.IssueAgent.IncidentDBTool'}
+
+[AGENT]:
+
+Running CodedTool class IncidentDBTool.invoke() synchronously in an asynchronous environment.
+This can lead to performance problems when running within a server. Consider porting to the async_invoke() method.
+
+
+[AGENT]:
+Got result: {'incident_id': 'ab669dbe-786a-467b-a241-2f1fba37a408', 'message': 'Incident successfully logged.', 'details': {'customer_name': 'Vicente Zambrano', 'issue_type': 'Lost Baggage', 'description': 'baggage lost on Madrid to Paris flight of August 4th', 'status': 'Logged', 'escalated': False}}

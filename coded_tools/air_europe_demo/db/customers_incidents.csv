@@ -1,0 +1,4 @@
+incident_id,customer_name,issue_type,description,status,escalated
+9c7677a2-5e3e-410c-85e5-58f3ef73d5db,Week John,Lost Baggage,Lost baggage in London.,Logged,False
+69dc67f4-5479-48a2-b921-a66b348b7c80,John Week,Lost Baggage,Lost baggage in Madrid,Logged,False
+12f2e19f-c141-4d1b-9e27-493cbdf3b9d4,Manolo Ramirez,Lost Baggage,I lost my guitar in the travel Paris - Mexico the past monday.,Logged,False

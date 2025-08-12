@@ -1,0 +1,2 @@
+incident_id,customer_name,issue_type,description,status,escalated
+ab669dbe-786a-467b-a241-2f1fba37a408,Vicente Zambrano,Lost Baggage,baggage lost on Madrid to Paris flight of August 4th,Logged,False

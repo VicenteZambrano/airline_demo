@@ -1,11 +1,10 @@
 {
-
-llm_config {
-  model_name = "gemini-2.5-flash"
-},
-"commondefs": {
-        "replacement_strings": {
-            "instructions_prefix": """
+  "llm_config": {
+    "model_name": "gemini-2.5-flash"
+  },
+  "commondefs": {
+    "replacement_strings": {
+      "instructions_prefix": """
 
             You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
 
@@ -14,7 +13,7 @@ llm_config {
             Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
 
             """,
-            "aaosa_instructions": """
+      "aaosa_instructions": """
 
                 You operate within a distributed agent architecture.
 
@@ -27,58 +26,51 @@ llm_config {
                 5. Respond in "ours" terms instead of "their".
                 6. When the chatbot it´s mention, the chatbot is you. Respond in first person.
 
-
                 As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
 
                 Stay within scope and only take actions permitted by your design.
 
-
-
             """
-        },
-        "replacement_values": {
-            "aaosa_call": {
-                "description": "Depending on the mode, returns a natural language string in response.",
-                "parameters": {
-                    "type": "object",
-                    "properties": {
-                        "inquiry": {
-                            "type": "string",
-                            "description": "The inquiry"
-                        },
-                        "mode": {
-                            "type": "string",
-                            "description": """
+    },
+    "replacement_values": {
+      "aaosa_call": {
+        "description": "Depending on the mode, returns a natural language string in response.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "inquiry": {
+              "type": "string",
+              "description": "The inquiry"
+            },
+            "mode": {
+              "type": "string",
+              "description": """
                               indicates whether the agent is being asked to determine if the inquiry belongs to it
                               in its entirety or in part. or if it is being asked to provide requirements to fulfill
                               the inquiry, if any. or if it is being asked to respond to the inquiry.
                             """
-                        }
-                    },
-                    "required": [
-                        "inquiry",
-                        "mode"
-                    ]
-                }
-            },
-            "aaosa_command": "Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything."
+            }
+          },
+          "required": [
+            "inquiry",
+            "mode"
+          ]
         }
-    },
-"tools": [
-    
-        {
-            "name": "RouterAgent",
-
-            "function": {
-
-                "description": """
+      },
+      "aaosa_command": "Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything."
+    }
+  },
+  "tools": [
+    {
+      "name": "RouterAgent",
+      "function": {
+        "description": """
 
                 Determines the user's intent and routes the request to the most appropriate specialized agent: Ticketing, Incident Handling, or FAQ.
 
                 """
-            },
-
-            "instructions": """
+      },
+      "instructions": """
 
                 {instructions_prefix}
 
@@ -91,29 +83,27 @@ llm_config {
 
                 Only respond with one of the following labels: "ticketing", "incident", or "faq".
 
-                                Also respond to the user. When other agents mention the airline chatbot, it´s you.
+                Also respond to the user. When other agents mention the airline chatbot, it´s you.
 
                 {aaosa_instructions}
 
         """,
-            "tools": ["IntentClassifier","TicketingAgent","IssueAgent","FAQAgent"],
-          },
-          {
-            "name": "IntentClassifier",
-            "function": "aaosa_call",
-            "instructions": """
+      "tools": ["IntentClassifier", "TicketingAgent", "IssueAgent", "FAQAgent", "URLProvider_AE"]
+    },
+    {
+      "name": "IntentClassifier",
+      "function": "aaosa_call",
+      "instructions": """
                 {instructions_prefix}
                 Classifies user message intent: ticketing, incident, or faq.
                 {aaosa_instructions}
             """,
-            "command": "aaosa_command",
-        },
-         {
-            "name": "TicketingAgent",
-
-           "function": "aaosa_call",
-
-            "instructions": """
+      "command": "aaosa_command"
+    },
+    {
+      "name": "TicketingAgent",
+      "function": "aaosa_call",
+      "instructions": """
 
                 {instructions_prefix}
 
@@ -126,140 +116,191 @@ llm_config {
                 {aaosa_instructions}
 
         """,
-            "tools": ["FlightBookingAPI", "CalendarParser", "UserProfileTool", "PriceCheckerTool"],
-            "command": "aaosa_command",
-          },
-           {
-            "name": "FlightBookingAPI",
-            "function": "aaosa_call",
-            "instructions": """
+      "tools": ["FlightBookingAPI", "CalendarParser", "UserProfileTool", "PriceCheckerTool"],
+      "command": "aaosa_command"
+    },
+    {
+      "name": "FlightBookingAPI",
+      "function": "aaosa_call",
+      "instructions": """
                 {instructions_prefix}
                 Manage booking, cancellation, modification, and status checking of airline tickets.
                 {aaosa_instructions}
             """,
-            "command": "aaosa_command",
-        },
-         {
-            "name": "CalendarParser",
-            "function": "aaosa_call",
-            "instructions": """
+      "command": "aaosa_command"
+    },
+    {
+      "name": "CalendarParser",
+      "function": "aaosa_call",
+      "instructions": """
                 {instructions_prefix}
                 Parses user text input and returns a standard date (YYYY-MM-DD).
                 {aaosa_instructions}
             """,
-            "command": "aaosa_command",
-        },
-         {
-            "name": "UserProfileTool",
-            "function": "aaosa_call",
-            "instructions": """
+      "command": "aaosa_command"
+    },
+    {
+      "name": "UserProfileTool",
+      "function": "aaosa_call",
+      "instructions": """
                 {instructions_prefix}
                 Verifies user identity or profile given a user_id.
                 {aaosa_instructions}
             """,
-            "command": "aaosa_command",
-        },
-         {
-            "name": "PriceCheckerTool",
-            "function": "aaosa_call",
-            "instructions": """
+      "command": "aaosa_command"
+    },
+    {
+      "name": "PriceCheckerTool",
+      "function": "aaosa_call",
+      "instructions": """
                 {instructions_prefix}
                 Returns price estimates for flights given a route and date.
                 {aaosa_instructions}
             """,
-            "command": "aaosa_command",
-        },
-
-          {
-                name = "IssueAgent"
-                function = "aaosa_call"
-                instructions = """
+      "command": "aaosa_command"
+    },
+    {
+      "name": "IssueAgent",
+      "function": "aaosa_call",
+      "instructions": """
             {instructions_prefix}
             You are in charge of collecting, logging, and resolving customer incidents, such as delays, missed flights, and baggage issues.
             Escalate to a human if required. Provide a clear incident ID after logging.
             {aaosa_instructions}
-                """
-                command = "aaosa_command"
-                tools = ["IncidentDBTool","HumanEscalationTool","EmailNotificationTool","DocumentSummarizer"]
+                """,
+      "command": "aaosa_command",
+      "tools": ["IncidentDBTool", "HumanEscalationTool", "EmailNotificationTool", "DocumentSummarizer"]
+    },
+    {
+      "name": "IncidentDBTool",
+      "function": {
+        "description": """
+        Logs a customer incident with details such as type and description. To do so is needed:
+            - "customer_name" (str): The full name of the customer.
+            - "issue_type" (str): The type of incident (e.g., 'Delayed Flight').
+            - "description" (str): A detailed description of the incident.
+        Then generates a unique incident ID and stores the incident in a CSV file.
+        Returns a dictionary containing:
+            - "incident_id": The unique ID assigned to the incident.
+            - "message": Confirmation message.
+            - "details": The full incident data.
+                """,
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "customer_name": {
+              "type": "string",
+              "description": "The full name of the customer reporting the incident"
             },
-            {
-            "name": "IncidentDBTool",
-            "function": "aaosa_call",
-            "instructions": """
-                {instructions_prefix}
-                Logs a customer incident with details such as type and description.
-                {aaosa_instructions}
-            """,
-            "command": "aaosa_command",
-        },
-        {
-            "name": "HumanEscalationTool",
-            "function": "aaosa_call",
-            "instructions": """
+            "issue_type": {
+              "type": "string",
+              "description": "The type of incident (e.g., 'Delayed Flight', 'Lost Baggage')"
+            },
+            "description": {
+              "type": "string",
+              "description": "A detailed description of the incident"
+            }
+          },
+          "required": ["customer_name", "issue_type", "description"]
+        }
+      },
+      "class": "incident_db.IncidentDBTool",
+      "command": "aaosa_command"
+    },
+    {
+      "name": "HumanEscalationTool",
+      "function": "aaosa_call",
+      "instructions": """
                 {instructions_prefix}
                 Escalates an unresolved incident to a human support agent.
                 {aaosa_instructions}
             """,
-            "command": "aaosa_command",
-        },
-        {
-            "name": "EmailNotificationTool",
-            "function": "aaosa_call",
-            "instructions": """
+      "command": "aaosa_command"
+    },
+    {
+      "name": "EmailNotificationTool",
+      "function": "aaosa_call",
+      "instructions": """
                 {instructions_prefix}
                 Sends an email notification to a customer regarding an incident update.
                 {aaosa_instructions}
             """,
-            "command": "aaosa_command",
-        },
-         {
-            "name": "DocumentSummarizer",
-            "function": "aaosa_call",
-            "instructions": """
+      "command": "aaosa_command"
+    },
+    {
+      "name": "DocumentSummarizer",
+      "function": "aaosa_call",
+      "instructions": """
                 {instructions_prefix}
                 Summarizes a conversation history or incident description to create a concise log entry for database storage or human escalation.
                 {aaosa_instructions}
             """,
-            "command": "aaosa_command",
-        },
-       
-
-            {
-                name = "FAQAgent"
-                function = "aaosa_call"
-                instructions = """
+      "command": "aaosa_command"
+    },
+    {
+      "name": "FAQAgent",
+      "function": "aaosa_call",
+      "instructions": """
             {instructions_prefix}
             Always use your tool to respond to the inquiry.
             If the tool failed or unavailable, just notify the user.
             Do not attempt to answer the question by yourself.
             Also respond to the user. When other agents mention the airline chatbot, it´s you.
 
-
             {aaosa_instructions}
-                """
-                command = "aaosa_command"
-                tools = ["RAGTool"]
-            },
+                """,
+      "command": "aaosa_command",
+      "tools": ["RAGTool"]
+    },
+    {
+      "name": "RAGTool",
+      "function": {
+        "description": "RAG to search in the FAQ document",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "user_query": {
+              "type": "string",
+              "description": "Query of the user"
+            }
+          },
+          "required": ["user_query"]
+        }
+      },
+      "class": "rag_tool.RagTool"
+    },
+    {
+      "name": "URLProvider_AE",
+      "function": {
+        "description": """
+Provides URLs for Air Europa helpdesk and intranet resources.
+You MUST call this tool to retrieve the correct URL.
+The name of the topic or service must be passed as a parameter.
+Available options include:
+- Customer Service
+- Group request reservation
+- Flight notices
+- Access your booking
+- Baggage: Everything You Need to Know
+- Terms and Conditions
+- Air Europa's services
+- Top Sales
+- Find Flights Tickets and Deals
 
-            {
-            "name": "RAGTool",
-            "function": {
-                "description": "RAG to search in the FAQ document",
-                "parameters":{
-                    "type": "object",
-                    "properties":{
-                        "user_query": {
-                            "type": "string",
-                            "description": "Query of the user"
-                        }
-                    },
-                    "required":["user_query"]
-                }
-            },
-            "class" = rag_tool.rag_tool.RagTool
-        },
-
-
-    ]
-
+                """,
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "app_name": {
+              "type": "string",
+              "description": "The name of the Air Europa policy, service, or helpdesk topic for which the URL is needed"
+            }
+          },
+          "required": ["app_name"]
+        }
+      },
+      "class": "url_provider_ae.URLProvider_AE"
+    }
+  ]
 }
+

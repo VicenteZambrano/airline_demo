@@ -2011,3 +2011,289 @@ You can reach our customer service through the following methods:\n*   **Phone:*
     "total_tokens": 0.0
 }
 ```
+
+[SYSTEM]:
+
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+
+                You are a smart routing assistant for an airline chatbot. Your task is to analyze the user's message and determine the intent behind it. Choose whether the user needs help with ticket booking or modifications, is reporting a problem or incident, or is simply asking for general information (like baggage policy, refund rules, etc.).
+
+                Possible routes:
+                - "ticketing": for booking, modifying, canceling, or checking flights
+                - "incident": for complaints, missed flights, lost baggage, delays, etc.
+                - "faq": for general information from internal documents and policies
+
+                Only respond with one of the following labels: "ticketing", "incident", or "faq".
+
+                Also respond to the user. When other agents mention the airline chatbot, it´s you.
+
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Respond in "ours" terms instead of "their".
+                6. When the chatbot it´s mention, the chatbot is you. Respond in first person.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+
+        
+
+[HUMAN]:
+How can I contact the costumer service?
+
+[AGENT]:
+Invoking: `FAQAgent` with `{'mode': 'detect', 'inquiry': 'How can I contact the costumer service?'}`
+
+[AI]:
+We can help you with your inquiry. You can contact our customer service through our 24/7 hotline, email at support@[airline].com, live chat on our website and mobile app, or by talking directly with our chatbot anytime.
+
+[AI]:
+We can help you with your inquiry. You can contact our customer service through our 24/7 hotline, email at support@[airline].com, live chat on our website and mobile app, or by talking directly with our chatbot anytime.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 11.790190696716309,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[HUMAN]:
+I have lost my baggage in the last flight, what can I do?
+
+[AGENT]:
+Invoking: `IssueAgent` with `{'mode': 'respond', 'inquiry': 'I have lost my baggage in the last flight, what can I do?'}`
+
+[AI]:
+I can help with parts of your inquiry. I can log your lost baggage incident and then escalate it to a human agent who can provide direct assistance.\n\nTo log the incident, I will need your full name and a detailed description of what happened with your baggage. After logging, I can connect you with one of our human support agents.
+
+[AI]:
+I can help with parts of your inquiry. I can log your lost baggage incident and then escalate it to a human agent who can provide direct assistance.
+
+To log the incident, I will need your full name and a detailed description of what happened with your baggage. After logging, I can connect you with one of our human support agents.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 12.842843055725098,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[HUMAN]:
+vicente Zambrano, my baggage was lost in the Madrid to Paris flight of 4th august
+
+[AGENT]:
+Invoking: `IssueAgent` with `{'mode': 'respond', 'inquiry': 'vicente Zambrano, my baggage was lost in the Madrid to Paris flight of 4th august'}`
+
+[AI]:
+I can respond to the entirety of this inquiry. I have all the necessary information to log the incident regarding your lost baggage. I will provide you with an incident ID once it's logged.
+
+[AI]:
+I can respond to the entirety of this inquiry. I have all the necessary information to log the incident regarding your lost baggage. I will provide you with an incident ID once it's logged.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 4.035048723220825,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[HUMAN]:
+ok log it
+
+[AGENT]:
+Invoking: `IssueAgent` with `{'mode': 'respond', 'inquiry': 'Vicente Zambrano, baggage lost on Madrid to Paris flight of August 4th'}`
+
+[AI]:
+I have successfully logged your lost baggage incident. Your incident ID is 'ab669dbe-786a-467b-a241-2f1fba37a408'.
+
+[AI]:
+I have successfully logged your lost baggage incident. Your incident ID is 'ab669dbe-786a-467b-a241-2f1fba37a408'.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 6.052789688110352,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[HUMAN]:
+Ok when the issue can be solved?
+
+
+[AGENT]:
+Invoking: `IssueAgent` with `{'mode': 'respond', 'inquiry': 'Ok when the issue can be solved?'}`
+
+[AI]:
+Yes, I can respond to this inquiry. My function is to escalate unresolved incidents to a human support agent, which aligns directly with the need to provide more specific information regarding issue resolution timelines. To proceed with the escalation, I would need the details of the incident requiring attention.
+
+[AI]:
+Yes, I can respond to this inquiry. My function is to escalate unresolved incidents to a human support agent, which aligns directly with the need to provide more specific information regarding issue resolution timelines. To proceed with the escalation, I would need the details of the incident requiring attention.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 13.051068305969238,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[HUMAN]:
+I want to book a flight to Madrid to London
+
+[AGENT]:
+Invoking: `IntentClassifier` with `{'mode': 'classify', 'inquiry': 'I want to book a flight to Madrid to London'}`
+
+[AI]:
+I can classify this inquiry as 'ticketing'. No additional information is needed to classify this request.
+
+[AGENT]:
+Invoking: `TicketingAgent` with `{'mode': 'respond', 'inquiry': 'I want to book a flight to Madrid to London'}`
+
+[AI]:
+Yes, I can help you with booking your flight from Madrid to London. To proceed, I need to know your desired travel dates (departure and return, if applicable) and the number of passengers.
+
+[AI]:
+Yes, I can help you with booking your flight from Madrid to London. To proceed, I need to know your desired travel dates (departure and return, if applicable) and the number of passengers.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 8.283747673034668,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[HUMAN]:
+1 passenger and 3th of september
+
+[AGENT]:
+Invoking: `TicketingAgent` with `{'mode': 'respond', 'inquiry': 'book a flight from Madrid to London for 1 passenger on 3rd of September'}`
+
+[AI]:
+I can definitely assist you with booking a flight. I have all the necessary information to proceed with your request. I will book a flight from Madrid to London for 1 passenger on the 3rd of September.
+
+[AI]:
+I can definitely assist you with booking your flight. I have all the necessary information to proceed with your request. I will book a flight from Madrid to London for 1 passenger on the 3rd of September.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 6.966748476028442,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[HUMAN]:
+ok, can you provide the URLs of the pages of all the conversation?
+
+[AGENT]:
+Invoking: `URLProvider_AE` with `{'app_name': 'Customer Service'}`
+
+[AGENT]:
+Invoking: `URLProvider_AE` with `{'app_name': 'Find Flights Tickets and Deals'}`
+
+[AGENT]:
+Invoking: `URLProvider_AE` with `{'app_name': 'Access your booking'}`
+
+[AI]:
+https://www.aireuropa.com/es/en/aea/customer-service.html
+
+[AI]:
+https://www.aireuropa.com/en-es/flight-deals?em_o=MAD&_gl=1*1uy9yxy*_up*MQ..*_ga*MTM3NzU1NTI2Mi4xNzU0OTgwNTA1*_ga_3FP4QGJ6VF*czE3NTQ5ODA1MDQkbzEkZzAkdDE3NTQ5ODA1MDQkajYwJGwwJGgw*_ga_G13VWM48QC*czE3NTQ5ODA1MDQkbzEkZzAkdDE3NTQ5ODA1MDQkajYwJGwwJGg2Mjk4NDk4NDg.
+
+[AI]:
+https://www.aireuropa.com/es/en/mytrips?_gl=1*j415ka*_up*MQ..*_ga*MjAwNDE4NjQ0Ny4xNzU0OTE0ODgx*_ga_3FP4QGJ6VF*czE3NTQ5MTQ4ODEkbzEkZzEkdDE3NTQ5MTUwMTgkajIzJGwwJGgw*_ga_G13VWM48QC*czE3NTQ5MTQ4ODEkbzEkZzAkdDE3NTQ5MTUwMTgkajIzJGwwJGgyOTU2NzY4Nzk.
+
+[AI]:
+Here are the URLs related to our conversation:
+
+*   **Customer Service:** https://www.aireuropa.com/es/en/aea/customer-service.html
+*   **Find Flights Tickets and Deals:** https://www.aireuropa.com/en-es/flight-deals?em_o=MAD&_gl=1*1uy9yxy*_up*MQ..*_ga*MTM3NzU1NTI2Mi4xNzU0OTgwNTA1*_ga_3FP4QGJ6VF*czE3NTQ5ODA1MDQkbzEkZzAkdDE3NTQ5ODA1MDQkajYwJGwwJGgw*_ga_G13VWM48QC*czE3NTQ5ODA1MDQkbzEkZzAkdDE3NTQ5ODA1MDQkajYwJGwwJGg2Mjk4NDk4NDg.
+*   **Access your booking:** https://www.aireuropa.com/es/en/mytrips?_gl=1*j415ka*_up*MQ..*_ga*MjAwNDE4NjQ0Ny4xNzU0OTE0ODgx*_ga_3FP4QGJ6VF*czE3NTQ5MTQ4ODEkbzEkZzEkdDE3NTQ5MTUwMTgkajIzJGwwJGgw*_ga_G13VWM48QC*czE3NTQ5MTQ4ODEkbzEkZzAkdDE3NTQ5MTUwMTgkajIzJGwwJGgyOTU2NzY4Nzk.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 5.307871103286743,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```

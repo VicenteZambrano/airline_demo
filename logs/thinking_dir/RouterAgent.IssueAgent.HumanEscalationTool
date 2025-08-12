@@ -52,3 +52,115 @@ I can respond to this inquiry. I can escalate the request to a human support age
     "total_tokens": 0.0
 }
 ```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Escalates an unresolved incident to a human support agent.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Respond in "ours" terms instead of "their".
+                6. When the chatbot it´s mention, the chatbot is you. Respond in first person.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'I have lost my baggage in the last flight, what can I do?'.
+The mode is 'can_respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can help you by connecting you with one of our human support agents who can assist you directly with your lost baggage inquiry. I do not directly handle the lost baggage claim process myself, but I can facilitate getting you to the right person.
+
+To do this, I would need to confirm that your issue requires a direct connection to a human agent.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 5.959237813949585,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Escalates an unresolved incident to a human support agent.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Respond in "ours" terms instead of "their".
+                6. When the chatbot it´s mention, the chatbot is you. Respond in first person.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'I cannot provide an exact timeline for issue resolution as my function is to log and manage incidents. For updates on when an issue can be solved, I need to escalate this to a human agent who can provide more specific information.'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+Yes, I can respond to this inquiry. My function is to escalate unresolved incidents to a human support agent, which aligns directly with the need to provide more specific information regarding issue resolution timelines. To proceed with the escalation, I would need the details of the incident requiring attention.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 4.794949293136597,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```

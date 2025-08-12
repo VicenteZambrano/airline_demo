@@ -132,3 +132,19 @@ Got result: You can reach customer service through the following methods:
 *   **Email:** support@[airline].com.
 *   **Live Chat:** Available on their website and mobile app.
 *   **Chatbot:** You can talk directly with their chatbot anytime for quick assistance.
+
+[AGENT]:
+Received arguments {'user_query': 'How can I contact the costumer service?', 'origin': [{'tool': 'RouterAgent', 'instantiation_index': 1}, {'tool': 'FAQAgent', 'instantiation_index': 1}, {'tool': 'RAGTool', 'instantiation_index': 1}], 'origin_str': 'RouterAgent.FAQAgent.RAGTool'}
+
+[AGENT]:
+
+Running CodedTool class RagTool.invoke() synchronously in an asynchronous environment.
+This can lead to performance problems when running within a server. Consider porting to the async_invoke() method.
+
+
+[AGENT]:
+Got result: You can contact customer service through the following methods:
+*   **Phone:** Call the 24/7 hotline listed on their Contact page.
+*   **Email:** Send an email to support@[airline].com.
+*   **Live Chat:** Use the live chat feature available on their website and mobile app.
+*   **Chatbot:** Talk directly with their chatbot anytime for quick assistance.
