@@ -1,2 +1,13 @@
 incident_id,customer_name,issue_type,description,status,escalated
 ab669dbe-786a-467b-a241-2f1fba37a408,Vicente Zambrano,Lost Baggage,baggage lost on Madrid to Paris flight of August 4th,Logged,False
+4bf3c958-9661-4e4b-8c09-24e4487bee6c,Vicente Zambrano,Lost Baggage,I lost my baggaes in the last flight. What can I do to claim?,Logged,False
+60e7f756-635d-42b6-bebe-7e3da8fdd3f4,Vicente Zambrano,Lost Baggage,Lost baggage,Logged,False
+20ff57eb-0cdd-41f0-94ba-43e630ea8e38,Vicente Zambrano,Lost Baggage,Lost baggage for Vicente Zambrano,Logged,False
+fc9cab3c-82d4-4bfe-8195-3e920d4563cb,John Due,Lost Baggage,Lost baggage for John Due,Logged,False
+33498ff0-2fce-4d4e-a93c-f52b5e9af5d1,Vicente Zambrano,Lost Baggage,Lost baggage,Logged,False
+5ec88764-c051-4625-9740-c531614a4195,Jhon Due,Lost Baggage,Lost baggage report for Jhon Due,Logged,False
+28232fb8-237b-4217-a54a-6434c7fedcb8,Jhon Due,Lost Baggage,Lost baggage for Jhon Due,Logged,False
+2300c56a-d241-470c-a384-fb94b4cb6747,Vicente Zambrano,Lost Baggage,Lost baggage for Vicente Zambrano,Logged,False
+2c58d57d-a7b5-43d9-a54d-7806d5d80760,jhhh+,Lost Baggage,Lost baggage for jhhh+,Logged,False
+74445eba-de9b-4c51-80b1-e5c0120e9d83,Jhon Due,Lost Baggage,Lost baggage for Jhon Due,Logged,False
+14db240c-552c-4095-92c6-3caa499b6910,hh hh,Lost Baggage,User lost their baggage,Logged,False

@@ -1,0 +1,532 @@
+Agent: RouterAgent.IssueAgent.EmailNotificationTool
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Sends an email notification to a customer regarding an incident update.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Use "our" instead of "their" when referring to the airline or its services.
+                6. When the chatbot is mentioned, it refers to you—respond in the first person.
+                7. If the user asks, "How do I reach customer service?" redirect them to the FAQ Agent.
+                8. If the user reports a lost baggage issue, ask for their full name.
+                9. Once the user provides their name for a lost baggage report, log it using the Issue Agent and confirm that the incident has been recorded and inform them that a member of our airline will contact them within 48 hours. Then ask if they need any further assistance.
+                10. If the user asks to send issue info by mail, redirect to issue agent.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'Can you send this info by mail?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can redirect your request to our Issue Agent to handle sending the information by mail.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 0.9875411987304688,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Sends an email notification to a customer regarding an incident update.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Use "our" instead of "their" when referring to the airline or its services.
+                6. When the chatbot is mentioned, it refers to you—respond in the first person.
+                7. If the user asks, "How do I reach customer service?" redirect them to the FAQ Agent.
+                8. If the user reports a lost baggage issue, ask for their full name.
+                9. Once the user provides their name for a lost baggage report, log it using the Issue Agent and confirm that the incident has been recorded and inform them that a member of our airline will contact them within 48 hours. Then ask if they need any further assistance.
+                10. If the user asks to send issue info by mail, redirect to issue agent and later comunicate the email was sended.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'Can you send this info by mail'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+Yes, I can help with sending information by mail. To do so, I will need the specific information you wish to send and the email address to which it should be sent.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 2.631167411804199,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Sends an email notification to a customer regarding an incident update.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Use "our" instead of "their" when referring to the airline or its services.
+                6. When the chatbot is mentioned, it refers to you—respond in the first person.
+                7. If the user asks, "How do I reach customer service?" redirect them to the FAQ Agent.
+                8. If the user reports a lost baggage issue, ask for their full name.
+                9. Once the user provides their name for a lost baggage report, log it using the Issue Agent and confirm that the incident has been recorded and inform them that a member of our airline will contact them within 48 hours. Then ask if they need any further assistance.
+                10. If the user asks to send issue info by mail, redirect to issue agent and later comunicate the email was sended.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'Can you send this info by mail?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can assist with sending the information by mail. This will be handled by our Issue Agent. Once the email has been sent, I will confirm it with you.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 1.7249605655670166,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Sends an email notification to a customer regarding an incident update.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Use "our" instead of "their" when referring to the airline or its services.
+                6. When the chatbot is mentioned, it refers to you—respond in the first person.
+                7. If the user asks, "How do I reach customer service?" redirect them to the FAQ Agent.
+                8. If the user reports a lost baggage issue, ask for their full name.
+                9. Once the user provides their name for a lost baggage report, log it using the Issue Agent and confirm that the incident has been recorded and inform them that a member of our airline will contact them within 48 hours. Then ask if they need any further assistance.
+                10. If the user asks to send issue info by mail, redirect to issue agent.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'Can you send me the info by mail?'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can respond to this inquiry. Our Issue Agent can assist you with sending information by mail.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 3.1012766361236572,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Sends an email notification to a customer regarding an incident update.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Use "our" instead of "their" when referring to the airline or its services.
+                6. When the chatbot is mentioned, it refers to you—respond in the first person.
+                7. If the user asks, "How do I reach customer service?" redirect them to the FAQ Agent.
+                8. If the user reports a lost baggage issue, ask for their full name.
+                9. Once the user provides their name for a lost baggage report, log it using the Issue Agent and confirm that the incident has been recorded and inform them that a member of our airline will contact them within 48 hours. Then ask if they need any further assistance.
+                10. If the user asks to send issue info by mail, redirect to issue agent.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'Can you send me the info by mail?'.
+The mode is 'requirements'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+This inquiry falls under the responsibility of our Issue Agent. I will delegate this request to them. I do not require any additional information from you to do so.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 1.5247611999511719,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Sends an email notification to a customer regarding an incident update.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Use "our" instead of "their" when referring to the airline or its services.
+                6. When the chatbot is mentioned, it refers to you—respond in the first person.
+                7. If the user asks, "How do I reach customer service?" redirect them to the FAQ Agent.
+                8. If the user reports a lost baggage issue, ask for their full name.
+                9. Once the user provides their name for a lost baggage report, log it using the Issue Agent and confirm that the incident has been recorded and inform them that a member of our airline will contact them within 48 hours. Then ask if they need any further assistance.
+                10. If the user asks to send issue info by mail, redirect to issue agent.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'send issue info by mail to Jhondue@cognizant.com'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can assist by redirecting this request to our Issue Agent. To process this, the Issue Agent would need the specific issue information you wish to send and the email address you provided, Jhondue@cognizant.com.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 1.50264573097229,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Sends an email notification to a customer regarding an incident update.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Use "our" instead of "their" when referring to the airline or its services.
+                6. When the chatbot is mentioned, it refers to you—respond in the first person.
+                7. If the user asks, "How do I reach customer service?" redirect them to the FAQ Agent.
+                8. If the user reports a lost baggage issue, ask for their full name.
+                9. Once the user provides their name for a lost baggage report, log it using the Issue Agent and confirm that the incident has been recorded and inform them that a member of our airline will contact them within 48 hours. Then ask if they need any further assistance.
+                10. If the user asks to send issue info by mail, redirect to issue agent.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'Send incident information to jj@hm.com'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can assist with sending incident information. I need to delegate this request to our Issue Agent.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 1.199845552444458,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Sends an email notification to a customer regarding an incident update.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Use "our" instead of "their" when referring to the airline or its services.
+                6. When the chatbot is mentioned, it refers to you—respond in the first person.
+                7. If the user asks, "How do I reach customer service?" redirect them to the FAQ Agent.
+                8. If the user reports a lost baggage issue, ask for their full name.
+                9. Once the user provides their name for a lost baggage report, log it using the Issue Agent and confirm that the incident has been recorded and inform them that a member of our airline will contact them within 48 hours. Then ask if they need any further assistance.
+                10. If the user ask to receive an email, redirect to issue agent.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'send info by mail to hh@gmail.com'.
+The mode is 'respond'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+I can assist with sending an email. To proceed, please specify what information you would like to send to hh@gmail.com.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 3.2178494930267334,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
+
+[SYSTEM]:
+
+                
+
+            You are an autonomous agent responsible for a specific function in an airline's virtual assistant system.
+
+            Your role is strictly limited to your assigned domain of expertise. You must operate from the airline's perspective and only address issues within your designated responsibility.
+
+            Do not respond to personal matters or questions outside your scope. Do not state what you cannot do—focus only on what you *can* do.
+
+            
+                Sends an email notification to a customer regarding an incident update.
+                
+
+                You operate within a distributed agent architecture.
+
+                When you receive an inquiry, follow this multi-step protocol:
+                
+                1. Use your tools to determine which of your subordinate agents (if any) are responsible for part or all of the inquiry.
+                2. For each relevant subordinate, query what information or parameters they require to fulfill their role.
+                3. Once you've gathered all necessary inputs, delegate the task accordingly and collect the outputs.
+                4. Aggregate all responses into a single final answer and return it to the upstream agent or user.
+                5. Use "our" instead of "their" when referring to the airline or its services.
+                6. When the chatbot is mentioned, it refers to you—respond in the first person.
+                7. If the user asks, "How do I reach customer service?" redirect them to the FAQ Agent.
+                8. If the user reports a lost baggage issue, ask for their full name.
+                9. Once the user provides their name for a lost baggage report, log it using the Issue Agent and confirm that the incident has been recorded and inform them that a member of our airline will contact them within 48 hours. Then ask if they need any further assistance.
+                10. If the user ask to receive an email, redirect to issue agent.
+
+                As part of this system, you may also be called by other agents. In such cases, you act as a subordinate, respond to their directives, and return output as instructed.
+
+                Stay within scope and only take actions permitted by your design.
+
+            
+            
+
+[HUMAN]:
+The inquiry is 'can you send me the info by mail?'.
+The mode is 'requirements'.
+Explain if you can respond to all or parts of the inquiry and what you need in order to respond, if anything.
+
+[AI]:
+Yes, I can help with this. To send you the information by email, I will need your email address and clarification on what specific information you would like to receive.
+
+[AGENT]:
+```json
+{
+    "caveats": [
+        "Each LLM Branch Node also includes accounting for each of its callees."
+    ],
+    "completion_tokens": 0.0,
+    "prompt_tokens": 0.0,
+    "successful_requests": 0.0,
+    "time_taken_in_seconds": 5.753438711166382,
+    "total_cost": 0.0,
+    "total_tokens": 0.0
+}
+```
